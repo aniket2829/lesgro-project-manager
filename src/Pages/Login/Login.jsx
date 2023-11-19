@@ -31,13 +31,13 @@ export default function Login() {
                   <button
                     type="button"
                     onClick={() => setShowPassword((prev) => !prev)}
-                    className="cursor-pointer absolute bg-black"
+                    className="cursor-pointer absolute bg-blue-500"
                   >
                     {showPassword ? <AiOutlineEyeInvisible style={{color:"white"}}/> : <AiOutlineEye style={{color:"white"}} />}
                   </button>
                 </div>
                 <div className="text-center mt-3">
-                  <button className="text-white pointer w-2/4 p-3 bg-blue-500 rounded"type="submit">Submit</button>
+                  <button className="text-white pointer w-2/4 p-3  bg-blue-500 rounded"type="submit">Submit</button>
                 </div>
               </div>
             </form>
