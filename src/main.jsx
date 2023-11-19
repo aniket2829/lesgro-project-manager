@@ -6,12 +6,24 @@ import {
 } from "react-router-dom";
 import "./index.css"
 import Login from './Pages/Login/Login'
+import DashboardLayout from './Pages/Dashboard/DashboardLayout';
+import ProjectPage from './Pages/Dashboard/Projects/Projects';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Login />
   },
+  {
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "",
+        element: <ProjectPage />
+      }
+    ]
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
