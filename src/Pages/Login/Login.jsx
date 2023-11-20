@@ -8,42 +8,33 @@ export default function Login() {
 
   return (
     <>
-      <div className="flex bg-blue-600 h-screen">
-        <div className="flex-1 bg-cover " style={{ backgroundImage: `url(${Background})` }}></div>
-        <div className="flex flex-1 items-center justify-center">
-          <div className="max-w-md w-full p-10 bg-white rounded-xl shadow-md">
-            <h2 className="text-center text-xl font-bold">Login</h2>
-            <form className="w-full" action="">
-              <div className="login-form">
-                <label htmlFor="username">Username</label>
-                <input type="text" placeholder="Enter your Username" name="username" required />
-                <label htmlFor="password">Password</label>
-                <div className="password-input-container">
-                  <input
-                    id="pass"
-                    type={showPassword ? "text" : "password"}
-                    name="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Enter your Password"
-                    required
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setShowPassword((prev) => !prev)}
-                    className="cursor-pointer absolute bg-blue-500"
-                  >
-                    {showPassword ? <AiOutlineEyeInvisible style={{color:"white"}}/> : <AiOutlineEye style={{color:"white"}} />}
-                  </button>
-                </div>
-                <div className="text-center mt-3">
-                  <button className="text-white pointer w-2/4 p-3  bg-blue-500 rounded"type="submit">Submit</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
+      <div className="flex bg-blue-600 h-[100vh]">
+        <LeftComponent />
+        <RightComponent />
       </div>
     </>
   );
+}
+
+function LeftComponent() {
+  return (
+    <div className="w-6/12 sm:block hidden">
+      <img src={Background} className="object-cover h-[100vh]" alt="Left Side Image" />
+    </div>
+  )
+}
+
+function RightComponent() {
+  return (
+    <div className="flex items-center justify-center w-full sm:w-6/12">
+      <div className="w-[300px] bg-white py-2 px-8 rounded-xl">
+        <h1 className="text-2xl text-center my-4">Login</h1>
+        <div>
+          <input className="block w-full border-2 my-4 p-2 rounded" type="text" placeholder="Username"/>
+          <input className="block w-full border-2 my-4 p-2 rounded" type="text" placeholder="Password"/>
+        </div>
+        <button className="bg-blue-500 block w-full p-2 text-white mb-6 rounded">Sign in</button>
+      </div>
+    </div>
+  )
 }

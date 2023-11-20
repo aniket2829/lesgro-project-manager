@@ -2,18 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-.login-form input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    border: none;
-    border-bottom: solid black 1px;
-    outline: none; 
-}
 
-
-@media screen and (min-width: 320px) and (max-width: 640px) {
-    .bg-blue-600 {
-        background-image: none;
-    }
-}
