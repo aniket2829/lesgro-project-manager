@@ -26,15 +26,19 @@ function LeftComponent() {
 
 function RightComponent() {
   return (
+    
     <div className="flex items-center justify-center w-full sm:w-6/12">
+      <form action="">
       <div className="w-[300px] bg-white py-2 px-8 rounded-xl">
         <h1 className="text-2xl text-center my-4">Login</h1>
         <div>
-          <input className="block w-full border-b-2 my-4 outline-none p-2 rounded" type="text" placeholder="Username"/>
-          <input className="block w-full border-b-2 my-4 outline-none p-2 rounded" type="text" placeholder="Password"/>
+          <input className="block w-full border-b-2 my-4 outline-none p-2 rounded" type="text" placeholder="Username" required/>
+          <input className="block w-full border-b-2 my-4 outline-none p-2 rounded" type="password" placeholder="Password" required/>
         </div>
-        <button className="bg-blue-500 block w-full p-2 text-white mb-6 rounded">Sign in</button>
+        <button type="submit" className="bg-blue-500 block w-full p-2 text-white mb-6 rounded">Sign in</button>
       </div>
+      </form>
     </div>
+    
   )
 }
