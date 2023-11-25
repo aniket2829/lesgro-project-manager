@@ -4,10 +4,10 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import "./index.css"
-import Login from './Pages/Login/Login'
-import DashboardLayout from './Pages/Dashboard/DashboardLayout';
-import ProjectPage from './Pages/Dashboard/Projects/Projects';
+import "@/index.css"
+import Login from '@/Pages/Login/Login'
+import DashboardLayout from '@/Pages/Dashboard/DashboardLayout';
+import ProjectPage from "@/Pages/Dashboard/Projects/Projects"
 
 const router = createBrowserRouter([
   {
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
   }
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <RouterProvider router={router}/>
   </React.StrictMode>,

@@ -1,10 +1,8 @@
-import { useState } from "react";
-import Background from "../../assets/Background.png";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import Background from "@/assets/Background.png"
 
 export default function Login() {
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
+  // const [password, setPassword] = useState("");
+  // const [showPassword, setShowPassword] = useState(false);
 
   return (
     <>
@@ -34,7 +32,7 @@ function RightComponent() {
           <input className="block w-full border-b-2 my-4 outline-none p-2 rounded" type="text" placeholder="Username"/>
           <input className="block w-full border-b-2 my-4 outline-none p-2 rounded" type="password" placeholder="Password"/>
         </div>
-        <button type="submit" className="bg-blue-500 block w-full p-2 text-white mb-6 rounded">Sign in</button>
+        <button type="submit" className="bg-blue-500 hover:bg-blue-400 active:bg-blue-600 block w-full p-2 text-white mb-6 rounded">Sign in</button>
       </div>
     </div>
     
